@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass');
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Overpass';
+}
+
+.card {
+    display: flex;
+    background-color: var(--dark-blue);
+    flex-direction: column;
+    padding: 2rem;
+    width: 20rem;
+    border-radius: 2rem;
+    gap: 1rem;
+    opacity: 1;
+    transition: 500ms ease;
+}
+
+.thankYou-card {
+    display: none;
+    text-align: center;
+    gap: 0;
+    opacity: 0;
+    transition: 500ms ease;
+}
+
+.thankYou-card img {
+    transform: scale(0.5);
+    margin: 0;
+}
+
+.thankYou-card .selection {
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    background-color: var(--very-dark-blue);
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4rem;
+    color: var(--orange);
+}
+
+.card .text p {
+    font-size: 15px;
+    color: var(--light-grey);
+}
+
+.card .text h1 {
+    color: var(--white);
+}
+
+.card .submit {
+    border-radius: 2rem;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 0.8rem;
+    font-family: 'Overpass';
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    font-weight: 700;
+    transition: 200ms ease;
+}
+
+.card .submit:hover {
+    color: var(--orange);
+    background-color: var(--white);
+}
+
+.card .rating {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card .rating > * {
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    font-family: 'Overpass';
+    font-weight: 700;
+    color: var(--medium-grey);
+    background-color: var(--very-dark-blue);
+    border: none;
+    cursor: pointer;
+    transition: 200ms ease;
+}
+
+.card .rating > *:hover {
+    background-color: var(--medium-grey);
+    color: var(--white);
+}
+
+.card .star {
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background: var(--very-dark-blue);
+}
+
+.card .rating .selected {
+    background-color: var(--orange);
+    color: var(--white);
+}
